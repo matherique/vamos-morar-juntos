@@ -27,7 +27,7 @@ export default function Home() {
 
   return (
     <div className="w-full h-screen bg-black flex justify-center ">
-      <div className="lg:flex flex-row gap-24 mt-32">
+      <div className="lg:flex flex-row gap-24 lg:mt-32 mt-16">
         <div className="flex flex-col text-center">
           <span className="text-red-800 text-9xl">{days}</span>
           <span className="text-white uppercase text-5xl">Days</span>
