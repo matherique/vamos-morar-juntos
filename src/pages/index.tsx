@@ -29,20 +29,20 @@ export default function Home() {
     <div className="w-full h-screen bg-black flex justify-center ">
       <div className="lg:flex flex-row gap-24 lg:mt-32 mt-16">
         <div className="flex flex-col text-center">
-          <span className="text-red-800 text-9xl">{days}</span>
+          <span className="text-red-800 lg:text-9xl text-8xl">{String(days).padStart(2, '0')}</span>
           <span className="text-white uppercase text-5xl">Days</span>
         </div>
         <div className="flex flex-col text-center">
-          <span className="text-red-800 text-9xl">{hours}</span>
+          <span className="text-red-800 lg:text-9xl text-8xl">{String(hours).padStart(2, '0')}</span>
           <span className="text-white uppercase text-5xl">Hours</span>
         </div>
         <div className="flex flex-col text-center">
-          <span className="text-red-800 text-9xl">{minutes}</span>
+          <span className="text-red-800 lg:text-9xl text-8xl">{String(minutes).padStart(2, '0')}</span>
           <span className="text-white uppercase text-5xl">Minutes</span>
         </div>
         <div className="flex flex-col text-center">
-          <span className="text-red-800 text-9xl">{seconds}</span>
-          <span className="text-white uppercase text-5xl">Seconds</span>
+          <span className="text-red-800 lg:text-9xl text-8xl">{String(seconds).padStart(2, '0')}</span>
+          < span className="text-white uppercase text-5xl" > Seconds</span>
         </div>
       </div>
     </div>
