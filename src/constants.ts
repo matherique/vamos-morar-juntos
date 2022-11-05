@@ -1,1 +1,1 @@
-export const MAGIC_DATE = "2022-01-01"
+export const MAGIC_DATE = "2023-02-01"
