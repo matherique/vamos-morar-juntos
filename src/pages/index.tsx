@@ -54,6 +54,7 @@ export default function Home({ d, h, m, s }: Props) {
         <meta property="og:url" content="https://www.vamosmorarjuntos.com/" />
         <meta property="og:title" content="Vamos morar juntos - Matheus e Tainara❤️" />
         <meta property="og:description" content="Contador de quanto tempo vai demorar para Matheus e Tainara morarem juntos 'sozinhos'" />
+        <meta property="og:image" content="https://www.vamosmorarjuntos.com/us.png" />
 
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⏳</text></svg>" />
       </Head>
