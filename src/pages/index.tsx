@@ -3,6 +3,7 @@ import { GetServerSideProps } from "next"
 import { useEffect, useState } from "react"
 import { MAGIC_DATE } from "@/constants"
 import { counter } from "@/counter"
+import Head from "next/head"
 
 const target = dayjs(MAGIC_DATE)
 
@@ -42,12 +43,19 @@ export default function Home({ d, h, m, s }: Props) {
   }, [seconds])
 
   return (
-    <div className="w-full h-screen bg-black flex justify-center ">
-      <div className="lg:flex flex-row lg:gap-24 lg:mt-32">
-        <ClockNumber value={days} label="days" />
-        <ClockNumber value={hours} label="hours" />
-        <ClockNumber value={minutes} label="minutes" />
-        <ClockNumber value={seconds} label="seconds" />
+    <div>
+      <Head>
+        <title>Vamos morar juntos</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⏳</text></svg>" />
+      </Head>
+      <div className="w-full h-screen bg-black flex justify-center ">
+        <div className="lg:flex flex-row lg:gap-24 lg:mt-32">
+          <ClockNumber value={days} label="days" />
+          <ClockNumber value={hours} label="hours" />
+          <ClockNumber value={minutes} label="minutes" />
+          <ClockNumber value={seconds} label="seconds" />
+        </div>
       </div>
     </div>
   )
