@@ -1,15 +1,32 @@
 import dayjs from "dayjs"
+import { GetServerSideProps } from "next"
 import { useEffect, useState } from "react"
-import { MAGIC_DATE } from "../constants"
-import { counter } from "../counter"
+import { MAGIC_DATE } from "@/constants"
+import { counter } from "@/counter"
 
 const target = dayjs(MAGIC_DATE)
 
-export default function Home() {
-  const [days, setDays] = useState(59)
-  const [hours, setHours] = useState(23)
-  const [minutes, setMinutes] = useState(59)
-  const [seconds, setSeconds] = useState(59)
+type Props = {
+  d: number
+  h: number
+  m: number
+  s: number
+}
+
+export const getStaticProps: GetServerSideProps<Props> = async () => {
+  const now = dayjs()
+  const [d, h, m, s] = counter(now, target)
+
+  return {
+    props: { d, h, m, s },
+  }
+}
+
+export default function Home({ d, h, m, s }: Props) {
+  const [days, setDays] = useState(d)
+  const [hours, setHours] = useState(h)
+  const [minutes, setMinutes] = useState(m)
+  const [seconds, setSeconds] = useState(s)
 
   useEffect(() => {
     let timeoutId = setTimeout(() => {
