@@ -1,3 +1,3 @@
 ## ⏳ Vamos morar juntos 
 
-> Contador de quando vamos morar juntos em Pinda
+> Contador de quanto tempo falta para morarmos juntos
